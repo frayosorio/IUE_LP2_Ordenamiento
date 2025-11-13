@@ -1,6 +1,7 @@
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.JToolBar;
@@ -88,8 +89,10 @@ public class FrmOrdenamiento extends JFrame {
         tbOrdenamiento.add(btnBuscar);
         tbOrdenamiento.add(txtBuscar);
 
+        JScrollPane spDocumentos=new JScrollPane(tblDocumentos);
+
         getContentPane().add(tbOrdenamiento, BorderLayout.NORTH);
-        getContentPane().add(tblDocumentos, BorderLayout.CENTER);
+        getContentPane().add(spDocumentos, BorderLayout.CENTER);
 
         String nombreArchivo = System.getProperty("user.dir")
                 + "/src/datos/Datos.csv";
